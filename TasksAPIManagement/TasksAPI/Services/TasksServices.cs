@@ -78,7 +78,7 @@ namespace TasksAPI.Services
             taskFound.AdditionalData = task.AdditionalData;
 
             await _context.SaveChangesAsync();
-            return new OkObjectResult("Se edito el usuario");
+            return new OkObjectResult("Se edito la tarea");
         }
 
         public async Task<ActionResult<Tasks<int>>> GetTaskByStatusPending()
