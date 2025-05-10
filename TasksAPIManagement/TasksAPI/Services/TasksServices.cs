@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TasksAPI.DB;
+using TasksAPI.Delegates;
 using TasksAPI.Models;
 
 namespace TasksAPI.Services
@@ -8,9 +9,11 @@ namespace TasksAPI.Services
     public class TasksServices : ICrudServices<Tasks<int>>, ITasksService<Tasks<int>>
     {
         private readonly TaskAPIContext _context;
-        public TasksServices(TaskAPIContext context )
+        private readonly TaskDelegates _delegates;
+        public TasksServices(TaskAPIContext context, TaskDelegates delegates)
         {
             _context = context;
+            _delegates = delegates;
         }
 
 
@@ -39,11 +42,22 @@ namespace TasksAPI.Services
 
                 };
 
+
+                if (!_delegates.validate(newTask))
+                {
+                    return new BadRequestObjectResult("La fecha de entrega debe ser mayor a la actual y no pueden haber campos vacios");
+                }
+
                 await _context.TaskInt.AddAsync(newTask);
                 await _context.SaveChangesAsync();
 
+                if (task.Status =="Pending")
+                {
+                    return new ObjectResult(_delegates.CalculateDaysLeft(task));
+                }
 
-                return new OkObjectResult("La tarea ha sido creada exitosamente");
+                return _delegates.notifyCreation(task);
+                
             }
             catch (Exception ex)
             {
@@ -89,5 +103,8 @@ namespace TasksAPI.Services
 
             return new ObjectResult(tasksPending);
         }
+
+
+        
     }
 }
