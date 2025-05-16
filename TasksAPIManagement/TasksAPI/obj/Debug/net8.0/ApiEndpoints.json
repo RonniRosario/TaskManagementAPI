@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "TasksAPI.Controllers.TasksController",
+    "Method": "CreateHighPriorityTask",
+    "RelativePath": "api/Tasks/CrearPrioridadAlta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "task",
+        "Type": "TasksAPI.Models.Tasks\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TasksAPI.Controllers.TasksController",
     "Method": "UpdateTask",
     "RelativePath": "api/Tasks/Editar/{id}",
     "HttpMethod": "PUT",

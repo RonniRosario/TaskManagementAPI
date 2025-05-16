@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 using TasksAPI.DB;
 using TasksAPI.Delegates;
 using TasksAPI.Models;
@@ -104,7 +105,41 @@ namespace TasksAPI.Services
             return new ObjectResult(tasksPending);
         }
 
+        public async Task<ActionResult> CreateHighPriorityTask(Tasks<int> task)
+        {
+            try
+            {
+                var newTask = new Tasks<int>
+                {
+                    Description = task.Description,
+                    DueDate = task.DueDate,
+                    Status = "Pending",
+                    AdditionalData = 1
 
-        
+                };
+
+                if (!_delegates.validate(newTask))
+                {
+                    return new BadRequestObjectResult("La fecha de entrega debe ser mayor a la actual y no pueden haber campos vacios");
+                }
+
+
+                await _context.TaskInt.AddAsync(newTask);
+                await _context.SaveChangesAsync();
+
+                if (task.Status == "Pending")
+                {
+                    return new ObjectResult(_delegates.CalculateDaysLeft(task));
+                }
+
+                return _delegates.notifyCreation(task);
+
+            }
+            catch (Exception ex)
+            {
+                return new ObjectResult($"Error {ex.Message}");
+
+            }
+        }
     }
 }

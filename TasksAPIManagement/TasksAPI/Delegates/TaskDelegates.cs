@@ -17,7 +17,7 @@ namespace TasksAPI.Delegates
                    new OkObjectResult($"Tarea Creada: {task.Description} Vencimiento: {task.DueDate}");
 
         //Saber los dias restantes para completar la tarea
-        public Func<Tasks<int>, ActionResult> CalculateDaysLeft = task =>
+        public Func<Tasks<int>, ActionResult> CalculateDaysLeft = task =>   
          new OkObjectResult($"Tarea Creada,     Dias restantes: {(task.DueDate - DateTime.Now).Days}");
     }
 }

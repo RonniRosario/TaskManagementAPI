@@ -39,6 +39,11 @@ namespace TasksAPI.Controllers
         public Task<ActionResult> CreateTask(Tasks<int> task)
             => _services.Create(task);
 
+        [HttpPost]
+        [Route("CrearPrioridadAlta")]
+        public Task<ActionResult> CreateHighPriorityTask(Tasks<int> task)
+            => _taskServices.CreateHighPriorityTask(task);
+
         [HttpDelete]
         [Route("Eliminar/{id}")]
 
