@@ -25,6 +25,7 @@ namespace TasksAPI
             builder.Services.AddScoped<ICrudServices<Tasks<int>>, TasksServices>();
             builder.Services.AddScoped<ITasksService<Tasks<int>>, TasksServices>();
             builder.Services.AddScoped<TaskDelegates>();
+            builder.Services.AddScoped<TaskQueueService>();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

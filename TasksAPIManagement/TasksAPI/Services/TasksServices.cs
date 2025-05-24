@@ -11,10 +11,12 @@ namespace TasksAPI.Services
     {
         private readonly TaskAPIContext _context;
         private readonly TaskDelegates _delegates;
-        public TasksServices(TaskAPIContext context, TaskDelegates delegates)
+        private readonly TaskQueueService _queue;
+        public TasksServices(TaskAPIContext context, TaskDelegates delegates, TaskQueueService queue)
         {
             _context = context;
             _delegates = delegates;
+            _queue = queue;
         }
 
 
@@ -27,6 +29,8 @@ namespace TasksAPI.Services
 
             if (taskId == null) { return new NotFoundObjectResult("No se encontro la tarea"); }
 
+            
+
             return new ObjectResult(taskId);
         }
 
@@ -34,6 +38,7 @@ namespace TasksAPI.Services
         {
             try
             {
+                
                 var newTask = new Tasks<int>
                 {
                     Description = task.Description,
@@ -44,13 +49,15 @@ namespace TasksAPI.Services
                 };
 
 
-                if (!_delegates.validate(newTask))
-                {
+                if (!_delegates.validate(newTask))                {
                     return new BadRequestObjectResult("La fecha de entrega debe ser mayor a la actual y no pueden haber campos vacios");
                 }
 
                 await _context.TaskInt.AddAsync(newTask);
                 await _context.SaveChangesAsync();
+
+                _queue.EnqueueTask(newTask);
+               
 
                 if (task.Status =="Pending")
                 {
@@ -127,6 +134,8 @@ namespace TasksAPI.Services
                 await _context.TaskInt.AddAsync(newTask);
                 await _context.SaveChangesAsync();
 
+                _queue.EnqueueTask(newTask);
+
                 if (task.Status == "Pending")
                 {
                     return new ObjectResult(_delegates.CalculateDaysLeft(task));
@@ -141,5 +150,8 @@ namespace TasksAPI.Services
 
             }
         }
+
+
+        
     }
 }

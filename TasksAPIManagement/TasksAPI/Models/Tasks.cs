@@ -10,7 +10,7 @@ namespace TasksAPI.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [MinLength(5)]
+        [MinLength(5, ErrorMessage ="El mensaje debe de ser mayor de 5 letras")]
         public string Description { get; set; }
         
         public DateTime DueDate { get; set; }
