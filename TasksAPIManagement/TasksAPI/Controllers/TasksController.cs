@@ -24,6 +24,10 @@ namespace TasksAPI.Controllers
         [Route("Obtener")]
         public Task<ActionResult<IEnumerable<Tasks<int>>>> GetAll() 
             =>_services.GetAll();
+        [HttpGet]
+        [Route("PorcentajeTareasCompletadas")]
+        public Task<ActionResult<IEnumerable<Tasks<int>>>> CalculateTaskCompletionRate()
+            => _taskServices.CalculateTaskCompletionRate();
 
         [HttpGet]
         [Route("ObtenerId/{id}")]

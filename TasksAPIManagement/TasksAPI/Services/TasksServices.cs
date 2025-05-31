@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using TasksAPI.DB;
 using TasksAPI.Delegates;
@@ -12,6 +13,7 @@ namespace TasksAPI.Services
         private readonly TaskAPIContext _context;
         private readonly TaskDelegates _delegates;
         private readonly TaskQueueService _queue;
+        private static Dictionary<string, object> _cache = new Dictionary<string, object>();
         public TasksServices(TaskAPIContext context, TaskDelegates delegates, TaskQueueService queue)
         {
             _context = context;
@@ -151,7 +153,36 @@ namespace TasksAPI.Services
             }
         }
 
+        public async Task<ActionResult<IEnumerable<Tasks<int>>>> CalculateTaskCompletionRate()
+        {
+            //Clave para acceder al diccionario
+            const string keyCache = "completion-rate";
 
-        
+
+            //Confirmar si el resultado ya esta en el diccionario
+            if (_cache.TryGetValue(keyCache, out var cachedResult))
+            {
+                return new ObjectResult($"El porcentaje de tareas completado es: {cachedResult}");
+            }
+
+            //Utilizado para medir la velocidad en que termina de completar todo
+            var stopwatch = Stopwatch.StartNew();
+
+            var totalTasks = await _context.TaskInt.CountAsync();
+
+            if (totalTasks == 0) { return new NotFoundObjectResult("No hay tareas registradas"); }
+
+            var tasksCompleted = await _context.TaskInt.CountAsync(x=> x.Status =="Completed");
+
+            double completionRate = (double)tasksCompleted / totalTasks * 100;
+
+            _cache[keyCache] = completionRate;
+
+            stopwatch.Stop();
+            var totalElapsed = stopwatch.ElapsedMilliseconds;
+
+            return new ObjectResult($"El porcentaje de tareas completado es: {completionRate}% Tiempo: {totalElapsed}");
+        }
     }
 }
+

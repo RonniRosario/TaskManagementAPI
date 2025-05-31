@@ -7,5 +7,7 @@ namespace TasksAPI.Services
     {
         Task<ActionResult<T>> GetTaskByStatusPending();
         Task<ActionResult> CreateHighPriorityTask(Tasks<int> task);
+        Task<ActionResult<IEnumerable<T>>> CalculateTaskCompletionRate();
+
     }
 }
