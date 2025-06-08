@@ -6,7 +6,7 @@ using TasksAPI.DB;
 using TasksAPI.Delegates;
 using TasksAPI.Models;
 
-namespace TasksAPI.Services
+namespace TasksAPI.Services.Task
 {
     public class TasksServices : ICrudServices<Tasks<int>>, ITasksService<Tasks<int>>
     {
@@ -31,7 +31,7 @@ namespace TasksAPI.Services
 
             if (taskId == null) { return new NotFoundObjectResult("No se encontro la tarea"); }
 
-            
+
 
             return new ObjectResult(taskId);
         }
@@ -40,7 +40,7 @@ namespace TasksAPI.Services
         {
             try
             {
-                
+
                 var newTask = new Tasks<int>
                 {
                     Description = task.Description,
@@ -51,7 +51,8 @@ namespace TasksAPI.Services
                 };
 
 
-                if (!_delegates.validate(newTask))                {
+                if (!_delegates.validate(newTask))
+                {
                     return new BadRequestObjectResult("La fecha de entrega debe ser mayor a la actual y no pueden haber campos vacios");
                 }
 
@@ -59,15 +60,15 @@ namespace TasksAPI.Services
                 await _context.SaveChangesAsync();
 
                 _queue.EnqueueTask(newTask);
-               
 
-                if (task.Status =="Pending")
+
+                if (task.Status == "Pending")
                 {
                     return new ObjectResult(_delegates.CalculateDaysLeft(task));
                 }
 
                 return _delegates.notifyCreation(task);
-                
+
             }
             catch (Exception ex)
             {
@@ -79,7 +80,7 @@ namespace TasksAPI.Services
         public async Task<IActionResult> Delete(int id)
         {
             var taskFound = await _context.TaskInt.FindAsync(id);
-            if(taskFound == null) { return new NotFoundObjectResult("No se encontro la tarea"); }
+            if (taskFound == null) { return new NotFoundObjectResult("No se encontro la tarea"); }
 
             _context.TaskInt.Remove(taskFound);
 
@@ -87,7 +88,7 @@ namespace TasksAPI.Services
 
 
             return new ObjectResult("La tarea ha sido borrada exitosamente");
-           
+
         }
 
         public async Task<IActionResult> Update(int id, Tasks<int> task)
@@ -98,7 +99,7 @@ namespace TasksAPI.Services
 
             taskFound.Description = task.Description;
             taskFound.DueDate = task.DueDate;
-            taskFound.Status = task.Status; 
+            taskFound.Status = task.Status;
             taskFound.AdditionalData = task.AdditionalData;
 
             await _context.SaveChangesAsync();
@@ -109,7 +110,7 @@ namespace TasksAPI.Services
         {
             var tasksPending = await _context.TaskInt.Where(x => x.Status == "Pending").ToListAsync();
 
-            if(tasksPending == null) { return new NotFoundObjectResult("No se encontro una tarea con ese estado"); }
+            if (tasksPending == null) { return new NotFoundObjectResult("No se encontro una tarea con ese estado"); }
 
             return new ObjectResult(tasksPending);
         }
@@ -172,7 +173,7 @@ namespace TasksAPI.Services
 
             if (totalTasks == 0) { return new NotFoundObjectResult("No hay tareas registradas"); }
 
-            var tasksCompleted = await _context.TaskInt.CountAsync(x=> x.Status =="Completed");
+            var tasksCompleted = await _context.TaskInt.CountAsync(x => x.Status == "Completed");
 
             double completionRate = (double)tasksCompleted / totalTasks * 100;
 

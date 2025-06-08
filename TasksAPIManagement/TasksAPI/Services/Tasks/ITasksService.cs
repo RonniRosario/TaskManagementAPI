@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TasksAPI.Models;
 
-namespace TasksAPI.Services
+namespace TasksAPI.Services.Task
 {
     public interface ITasksService<T> where T : class
     {

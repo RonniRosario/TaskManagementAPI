@@ -1,9 +1,16 @@
 
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using TasksAPI.DB;
 using TasksAPI.Delegates;
+using TasksAPI.JWT;
 using TasksAPI.Models;
 using TasksAPI.Services;
+using TasksAPI.Services.AuthServices;
+using TasksAPI.Services.Task;
+using TasksAPI.Services.Usuarios;
 
 namespace TasksAPI
 {
@@ -24,8 +31,31 @@ namespace TasksAPI
 
             builder.Services.AddScoped<ICrudServices<Tasks<int>>, TasksServices>();
             builder.Services.AddScoped<ITasksService<Tasks<int>>, TasksServices>();
+            builder.Services.AddScoped<ICrudServices<Usuario>, UsuariosServices>();
             builder.Services.AddScoped<TaskDelegates>();
             builder.Services.AddScoped<TaskQueueService>();
+
+            builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<RefreshTokenServices>();
+            builder.Services.AddSingleton<Utilities>();
+            builder.Services.AddAuthentication(config =>
+            {
+                config.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                config.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(config =>
+            {
+                config.RequireHttpsMetadata = false;
+                config.SaveToken = true;
+                config.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.Zero,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:key"]!))
+                };
+            });
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -41,9 +71,8 @@ namespace TasksAPI
             }
 
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseAuthorization();
-
 
             app.MapControllers();
 

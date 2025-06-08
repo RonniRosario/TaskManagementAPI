@@ -11,7 +11,10 @@ namespace TasksAPI.DB
         }
 
         public DbSet<Tasks<int>> TaskInt { get; set; }
-        
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<RefreshToken> RefreshToken { get; set; }
+
+
 
     }
 }

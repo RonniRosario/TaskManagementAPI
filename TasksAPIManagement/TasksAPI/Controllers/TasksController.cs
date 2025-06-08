@@ -1,12 +1,15 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TasksAPI.Delegates;
 using TasksAPI.Models;
 using TasksAPI.Services;
+using TasksAPI.Services.Task;
 
 namespace TasksAPI.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class TasksController : ControllerBase
     {
