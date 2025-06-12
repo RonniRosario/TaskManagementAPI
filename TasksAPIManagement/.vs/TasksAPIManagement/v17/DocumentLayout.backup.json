@@ -3,40 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|c:\\users\\ronni\\source\\repos\\taskmanagementapi\\tasksapimanagement\\tasksapi\\services\\tasks\\taskqueueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|solutionrelative:tasksapi\\services\\tasks\\taskqueueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|c:\\users\\ronni\\source\\repos\\taskmanagementapi\\tasksapimanagement\\tasksapi\\services\\tasks\\tasksservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|solutionrelative:tasksapi\\services\\tasks\\tasksservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AAB09A0-99D2-49F0-88A3-03B4B37C2787}|ReceiveNotification\\ReceiveNotification.csproj|c:\\users\\ronni\\source\\repos\\taskmanagementapi\\tasksapimanagement\\receivenotification\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AAB09A0-99D2-49F0-88A3-03B4B37C2787}|ReceiveNotification\\ReceiveNotification.csproj|solutionrelative:receivenotification\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|c:\\users\\ronni\\source\\repos\\taskmanagementapi\\tasksapimanagement\\tasksapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|solutionrelative:tasksapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|c:\\users\\ronni\\source\\repos\\taskmanagementapi\\tasksapimanagement\\tasksapi\\services\\usuarios\\usuariosservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|solutionrelative:tasksapi\\services\\usuarios\\usuariosservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|c:\\users\\ronni\\source\\repos\\taskmanagementapi\\tasksapimanagement\\tasksapi\\services\\tasks\\tasksservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|solutionrelative:tasksapi\\services\\tasks\\tasksservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|c:\\users\\ronni\\source\\repos\\taskmanagementapi\\tasksapimanagement\\tasksapi\\services\\icrudservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|solutionrelative:tasksapi\\services\\icrudservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|c:\\users\\ronni\\source\\repos\\taskmanagementapi\\tasksapimanagement\\tasksapi\\hubs\\taskshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|solutionrelative:tasksapi\\hubs\\taskshub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|c:\\users\\ronni\\source\\repos\\taskmanagementapi\\tasksapimanagement\\tasksapi\\controllers\\usuarios\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|solutionrelative:tasksapi\\controllers\\usuarios\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|c:\\users\\ronni\\source\\repos\\taskmanagementapi\\tasksapimanagement\\tasksapi\\services\\tasks\\itasksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|solutionrelative:tasksapi\\services\\tasks\\itasksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|c:\\users\\ronni\\source\\repos\\taskmanagementapi\\tasksapimanagement\\tasksapi\\services\\authservices\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|solutionrelative:tasksapi\\services\\authservices\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|c:\\users\\ronni\\source\\repos\\taskmanagementapi\\tasksapimanagement\\tasksapi\\controllers\\auth\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|solutionrelative:tasksapi\\controllers\\auth\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|c:\\users\\ronni\\source\\repos\\taskmanagementapi\\tasksapimanagement\\tasksapi\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{354DF1EB-FB10-41DC-91D9-340B0DA330C1}|TasksAPI\\TasksAPI.csproj|solutionrelative:tasksapi\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,118 +59,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TasksServices.cs",
-              "DocumentMoniker": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Services\\Tasks\\TasksServices.cs",
-              "RelativeDocumentMoniker": "TasksAPI\\Services\\Tasks\\TasksServices.cs",
-              "ToolTip": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Services\\Tasks\\TasksServices.cs",
-              "RelativeToolTip": "TasksAPI\\Services\\Tasks\\TasksServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T01:58:28.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TaskQueueService.cs",
-              "DocumentMoniker": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Services\\Tasks\\TaskQueueService.cs",
-              "RelativeDocumentMoniker": "TasksAPI\\Services\\Tasks\\TaskQueueService.cs",
-              "ToolTip": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Services\\Tasks\\TaskQueueService.cs*",
-              "RelativeToolTip": "TasksAPI\\Services\\Tasks\\TaskQueueService.cs*",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T01:58:24.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Program.cs",
               "RelativeDocumentMoniker": "TasksAPI\\Program.cs",
               "ToolTip": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Program.cs",
               "RelativeToolTip": "TasksAPI\\Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA8wEkAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAuwEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T01:56:20.399Z",
+              "WhenOpened": "2025-06-12T15:48:00.315Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\ReceiveNotification\\Program.cs",
+              "RelativeDocumentMoniker": "ReceiveNotification\\Program.cs",
+              "ToolTip": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\ReceiveNotification\\Program.cs",
+              "RelativeToolTip": "ReceiveNotification\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T15:45:00.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TasksServices.cs",
+              "DocumentMoniker": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Services\\Tasks\\TasksServices.cs",
+              "RelativeDocumentMoniker": "TasksAPI\\Services\\Tasks\\TasksServices.cs",
+              "ToolTip": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Services\\Tasks\\TasksServices.cs",
+              "RelativeToolTip": "TasksAPI\\Services\\Tasks\\TasksServices.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAkwEwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T14:43:33.722Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UsuariosServices.cs",
-              "DocumentMoniker": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Services\\Usuarios\\UsuariosServices.cs",
-              "RelativeDocumentMoniker": "TasksAPI\\Services\\Usuarios\\UsuariosServices.cs",
-              "ToolTip": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Services\\Usuarios\\UsuariosServices.cs",
-              "RelativeToolTip": "TasksAPI\\Services\\Usuarios\\UsuariosServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAuAAAAAAAAAA==",
+              "Title": "TasksHub.cs",
+              "DocumentMoniker": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Hubs\\TasksHub.cs",
+              "RelativeDocumentMoniker": "TasksAPI\\Hubs\\TasksHub.cs",
+              "ToolTip": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Hubs\\TasksHub.cs",
+              "RelativeToolTip": "TasksAPI\\Hubs\\TasksHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T01:49:04.85Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ITasksService.cs",
-              "DocumentMoniker": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Services\\Tasks\\ITasksService.cs",
-              "RelativeDocumentMoniker": "TasksAPI\\Services\\Tasks\\ITasksService.cs",
-              "ToolTip": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Services\\Tasks\\ITasksService.cs",
-              "RelativeToolTip": "TasksAPI\\Services\\Tasks\\ITasksService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T01:48:06.027Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T14:18:40.573Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ICrudServices.cs",
-              "DocumentMoniker": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Services\\ICrudServices.cs",
-              "RelativeDocumentMoniker": "TasksAPI\\Services\\ICrudServices.cs",
-              "ToolTip": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Services\\ICrudServices.cs",
-              "RelativeToolTip": "TasksAPI\\Services\\ICrudServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAVAAAAAAAAAA==",
+              "Title": "TasksController.cs",
+              "DocumentMoniker": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Controllers\\TasksController.cs",
+              "RelativeDocumentMoniker": "TasksAPI\\Controllers\\TasksController.cs",
+              "ToolTip": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Controllers\\TasksController.cs",
+              "RelativeToolTip": "TasksAPI\\Controllers\\TasksController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAYwBIAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T22:40:28.799Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Controllers\\Usuarios\\UsuariosController.cs",
-              "RelativeDocumentMoniker": "TasksAPI\\Controllers\\Usuarios\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Controllers\\Usuarios\\UsuariosController.cs",
-              "RelativeToolTip": "TasksAPI\\Controllers\\Usuarios\\UsuariosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T22:37:30.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Controllers\\Auth\\AuthController.cs",
-              "RelativeDocumentMoniker": "TasksAPI\\Controllers\\Auth\\AuthController.cs",
-              "ToolTip": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Controllers\\Auth\\AuthController.cs",
-              "RelativeToolTip": "TasksAPI\\Controllers\\Auth\\AuthController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T22:34:53.158Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Services\\AuthServices\\AuthService.cs",
-              "RelativeDocumentMoniker": "TasksAPI\\Services\\AuthServices\\AuthService.cs",
-              "ToolTip": "C:\\Users\\ronni\\source\\repos\\TaskManagementAPI\\TasksAPIManagement\\TasksAPI\\Services\\AuthServices\\AuthService.cs",
-              "RelativeToolTip": "TasksAPI\\Services\\AuthServices\\AuthService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwC4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T22:04:45.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T02:12:04.191Z"
             }
           ]
         },

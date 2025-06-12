@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using TasksAPI.Delegates;
+using TasksAPI.Hubs;
 using TasksAPI.Models;
 using TasksAPI.Services;
 using TasksAPI.Services.Task;
@@ -16,10 +18,12 @@ namespace TasksAPI.Controllers
         private readonly ICrudServices<Tasks<int>> _services;
         private readonly ITasksService<Tasks<int>> _taskServices;
         
+        
         public TasksController(ICrudServices<Tasks<int>> services, ITasksService<Tasks<int>> taskServices)
         {
              _services = services;
             _taskServices = taskServices;
+            
             
         }
 
@@ -27,6 +31,7 @@ namespace TasksAPI.Controllers
         [Route("Obtener")]
         public Task<ActionResult<IEnumerable<Tasks<int>>>> GetAll() 
             =>_services.GetAll();
+
         [HttpGet]
         [Route("PorcentajeTareasCompletadas")]
         public Task<ActionResult<IEnumerable<Tasks<int>>>> CalculateTaskCompletionRate()
@@ -36,6 +41,7 @@ namespace TasksAPI.Controllers
         [Route("ObtenerId/{id}")]
         public Task<ActionResult<Tasks<int>>> GetTask(int id)
             => _services.Get(id);
+
         [HttpGet]
         [Route("EstatusPendiente")]
         public Task<ActionResult<Tasks<int>>> GetTaskByStatusPending()

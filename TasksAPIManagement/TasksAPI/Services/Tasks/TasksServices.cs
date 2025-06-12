@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using TasksAPI.DB;
 using TasksAPI.Delegates;
+using TasksAPI.Hubs;
 using TasksAPI.Models;
 
 namespace TasksAPI.Services.Task
@@ -13,12 +15,14 @@ namespace TasksAPI.Services.Task
         private readonly TaskAPIContext _context;
         private readonly TaskDelegates _delegates;
         private readonly TaskQueueService _queue;
+        private readonly IHubContext<TasksHub> _hubContext;
         private static Dictionary<string, object> _cache = new Dictionary<string, object>();
-        public TasksServices(TaskAPIContext context, TaskDelegates delegates, TaskQueueService queue)
+        public TasksServices(TaskAPIContext context, TaskDelegates delegates, TaskQueueService queue, IHubContext<TasksHub> hubContext)
         {
             _context = context;
             _delegates = delegates;
             _queue = queue;
+            _hubContext = hubContext;
         }
 
 
@@ -58,6 +62,7 @@ namespace TasksAPI.Services.Task
 
                 await _context.TaskInt.AddAsync(newTask);
                 await _context.SaveChangesAsync();
+                await _hubContext.Clients.All.SendAsync("receiveTaskNotification", newTask);
 
                 _queue.EnqueueTask(newTask);
 

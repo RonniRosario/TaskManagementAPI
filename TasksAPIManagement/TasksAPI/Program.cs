@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using TasksAPI.DB;
 using TasksAPI.Delegates;
+using TasksAPI.Hubs;
 using TasksAPI.JWT;
 using TasksAPI.Models;
 using TasksAPI.Services;
@@ -35,6 +36,8 @@ namespace TasksAPI
             builder.Services.AddScoped<TaskDelegates>();
             builder.Services.AddScoped<TaskQueueService>();
 
+            builder.Services.AddSignalR();
+
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<RefreshTokenServices>();
             builder.Services.AddSingleton<Utilities>();
@@ -63,6 +66,8 @@ namespace TasksAPI
 
             var app = builder.Build();
 
+
+
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -75,6 +80,8 @@ namespace TasksAPI
             app.UseAuthorization();
 
             app.MapControllers();
+
+            app.MapHub<TasksHub>("/receiveTaskNotification");
 
             app.Run();
         }

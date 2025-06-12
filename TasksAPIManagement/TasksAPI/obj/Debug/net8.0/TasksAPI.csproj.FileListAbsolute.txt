@@ -169,3 +169,8 @@ C:\Users\ronni\source\repos\TaskManagementAPI\TasksAPIManagement\TasksAPI\obj\De
 C:\Users\ronni\source\repos\TaskManagementAPI\TasksAPIManagement\TasksAPI\obj\Debug\net8.0\TasksAPI.genruntimeconfig.cache
 C:\Users\ronni\source\repos\TaskManagementAPI\TasksAPIManagement\TasksAPI\obj\Debug\net8.0\ref\TasksAPI.dll
 C:\Users\ronni\source\repos\TaskManagementAPI\TasksAPIManagement\TasksAPI\bin\Debug\net8.0\System.Reactive.dll
+C:\Users\ronni\source\repos\TaskManagementAPI\TasksAPIManagement\TasksAPI\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\ronni\source\repos\TaskManagementAPI\TasksAPIManagement\TasksAPI\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\ronni\source\repos\TaskManagementAPI\TasksAPIManagement\TasksAPI\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\ronni\source\repos\TaskManagementAPI\TasksAPIManagement\TasksAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\ronni\source\repos\TaskManagementAPI\TasksAPIManagement\TasksAPI\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
